@@ -22,15 +22,88 @@
       } */
 
       /* sélectionner par attribut class */
-      .important {
+      /* .important {
         border: 1px solid black;
+      } */
+
+      /* Cumuler des sélecteurs
+      sans espaces : ET Logique
+      */
+      /* h2.important {
+
+      }
+
+      p.important {
+
+      }
+
+      h2.important.title {
+
+      } */
+
+      /* toutes les balises */
+      /* * {
+
+      } */
+
+      /* on peut aussi passer plusieurs selecteurs */
+      h1, h2 {}
+
+      /* idem a plusieurs blocs de regles CSS */
+      h1 {}
+      h2 {}
+
+      /* sélectionne les liens (a)
+      dont un ancetre correspond à .menu-links
+      */
+      /* .menu-links a {
+        border: 1px solid black;
+      } */
+
+      /* sélectionne les liens (a)
+      dont le parent correspond à nav
+      */
+      /* nav > a {
+        border: 1px solid black;
+      } */
+
+      /* sélectionne le paragraphe (p)
+      dont le frere précédent est un h2
+      */
+      /* h2 + p {
+        border: 1px solid black;
+      } */
+
+
+      /* sélectionne le ou les paragraphes (p)
+      dont un des frere précédents est un h2
+      */
+      h2 ~ p {
+        border: 1px solid black;
+      }
+
+      /* p::first-letter {
+        font-size: 3em;
+      } */
+
+      p::before {
+        /* content: '- '; */
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid black;
+      }
+
+      p:hover {
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
     <!-- (h2>{Title})+(p>lorem)+(p>lorem) -->
     <h2>Title</h2>
-    <p>
+    <p> <!-- ce paragraphe est premier paragraphe fils de body (nth-of-type) mais 2e fils de body (nth-child) -->
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam et autem non
       nulla dolorum. Non tenetur totam pariatur deleniti facere, quam delectus
       recusandae maiores suscipit dolor, veritatis ullam ab eligendi!
