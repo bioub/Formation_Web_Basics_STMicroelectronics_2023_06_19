@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    #box {
+      /* box-sizing: border-box; */
+      height: 200px;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      /* controler le débordement */
+      overflow-y: hidden;
+    }
+
+    .panel1 {
+      /* box-sizing: border-box; */
+      padding: 10px;
+      height: 30%;
+      background-color: rgba(100%, 0%, 0%, 50%);
+    }
+
+    .panel2 {
+      /* box-sizing: border-box; */
+      padding: 10px;
+      height: 70%;
+      background-color: rgba(0%, 100%, 0%, 50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div class="panel1">1</div>
+    <div class="panel2">2</div>
+  </div>
+</body>
+</html>
