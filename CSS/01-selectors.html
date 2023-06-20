@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* sélectionner par nom de balise (tagname)
+        Ex: p
+            h2
+            div
+            form
+            body
+      */
+      /* h2 {
+        border: 1px solid black;
+      } */
+
+      /* sélectionner par attribut id */
+      /* #menu-end {
+        border: 1px solid black;
+      } */
+
+      /* sélectionner par attribut class */
+      .important {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- (h2>{Title})+(p>lorem)+(p>lorem) -->
+    <h2>Title</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam et autem non
+      nulla dolorum. Non tenetur totam pariatur deleniti facere, quam delectus
+      recusandae maiores suscipit dolor, veritatis ullam ab eligendi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+      veniam quae! Laboriosam eveniet illo non fugit neque reiciendis quia
+      dolores possimus doloremque optio officiis ipsa, soluta eius magnam
+      excepturi accusamus.
+    </p>
+    <h2 class="important title">Title</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam et autem non
+      nulla dolorum. Non tenetur totam pariatur deleniti facere, quam delectus
+      recusandae maiores suscipit dolor, veritatis ullam ab eligendi!
+    </p>
+    <p class="important">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+      veniam quae! Laboriosam eveniet illo non fugit neque reiciendis quia
+      dolores possimus doloremque optio officiis ipsa, soluta eius magnam
+      excepturi accusamus.
+    </p>
+    <nav class="menu-links">
+      <ul>
+        <li class="link-item">
+          <a href="#">Item 1</a>
+        </li>
+        <li class="link-item">
+          <a href="#">Item 2</a>
+        </li>
+        <li class="link-item">
+          <a href="#">Item 3</a>
+        </li>
+      </ul>
+    </nav>
+    <nav id="menu-end">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </nav>
+  </body>
+</html>
