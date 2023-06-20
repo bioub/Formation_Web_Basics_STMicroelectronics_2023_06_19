@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Formulaire GET</h2>
+  <!--
+    Enverra une requête par exemple :
+    GET https://httpbin.org/get?keywords=d%C3%A9veloppeur+web&since=2023-04-01&order=desc
+
+    La partie de l'URL ?keywords=d%C3%A9veloppeur+web&since=2023-04-01&order=desc
+    s'appelle la query ou query string
+   -->
+  <form action="https://httpbin.org/get" method="get">
+    <div>
+      Mots clés : <input type="text" name="keywords">
+    </div>
+    <div>
+      Depuis : <input type="date" name="since">
+    </div>
+    <div>
+      Tri : <select name="order">
+        <option value="asc">Croissant</option>
+        <option value="desc">Décroissant</option>
+      </select>
+    </div>
+    <div>
+      <button>Search</button>
+    </div>
+  </form>
+  <h2>Exemple plus concret, recherche Google</h2>
+  <!--
+    La requete sera de la forme :
+    GET https://www.google.com/search?q=d%C3%A9veloppeur+web
+   -->
+  <form action="https://www.google.com/search" method="get">
+    <input type="search" name="q">
+    <button>Recherche Google</button>
+  </form>
+  <h2>Login (POST)</h2>
+  <!--
+    La requete POST sera de la forme
+    POST https://httpbin.org/post HTTP/1.1
+    Host: httpbin.org
+    login=romain&password=123456&keep-alive=on
+   -->
+  <form action="https://httpbin.org/post" method="post">
+    <div>
+      Login : <input type="text" name="login">
+    </div>
+    <div>
+      Password : <input type="password" name="password">
+    </div>
+    <div>
+      Resté connecté : <input type="checkbox" name="keep-alive">
+    </div>
+    <button>
+      Login
+    </button>
+  </form>
+  <h2>Inscription (POST avec fichiers)</h2>
+    <!--
+    La requete POST sera de la forme
+    POST https://httpbin.org/post HTTP/1.1
+    Host: httpbin.org
+    login=romain&password=123456&keep-alive=on
+   -->
+  <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+    <div>
+      Email : <input type="email" name="email">
+    </div>
+    <div>
+      Téléphone : <input type="tel" name="phone">
+    </div>
+    <div>
+      Genre :
+      <label>
+        <input type="radio" name="genre" value="h">
+        Homme
+      </label>
+      <label>
+        <input type="radio" name="genre" value="f">
+        Femme
+      </label>
+    </div>
+    <div>
+      Description : <textarea name="description"></textarea>
+    </div>
+    <div>
+      Photo : <input type="file" name="photo">
+    </div>
+    <button>
+      Inscription
+    </button>
+  </form>
+
+  <h2>Placeholder</h2>
+  <!-- Certaines balises supportent le placeholder (label) -->
+  <form>
+    <input type="text" placeholder="Prénom">
+    <input type="text" placeholder="Nom">
+  </form>
+
+  <h2>Value / checked / selected</h2>
+  <!-- Pour préremplir un formulaire -->
+  <form>
+    <input type="text" placeholder="Prénom" value="Romain">
+    <input type="text" placeholder="Nom" value="Bohdanowicz">
+    <div>
+      Genre :
+      <label>
+        <input type="radio" name="genre" value="h" checked>
+        Homme
+      </label>
+      <label>
+        <input type="radio" name="genre" value="f">
+        Femme
+      </label>
+    </div>
+    <select name="order">
+      <option value="asc">Croissant</option>
+      <option value="desc" selected>Décroissant</option>
+    </select>
+  </form>
+</body>
+</html>

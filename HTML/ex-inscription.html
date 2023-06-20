@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="https://httpbin.org/post" method="post">
+    <div class="form-row">
+      <h3>Nom</h3>
+      <div class="form-fields">
+        <input type="text" placeholder="Prénom" name="prenom">
+        <input type="text" placeholder="Nom" name="nom">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Choisissez votre nom d'utilisateur</h3>
+      <div class="form-fields">
+        <input type="text" placeholder="@gmail.com" name="username">
+      </div>
+      <a href="#">Je préfère utiliser mon adresse e-mail actuelle</a>
+    </div>
+    <div class="form-row">
+      <h3>Créez votre mot de passe</h3>
+      <div class="form-fields">
+        <input type="password" name="password">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Confirmez votre mot de passe</h3>
+      <div class="form-fields">
+        <input type="password">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Confirmez votre mot de passe</h3>
+      <div class="form-fields">
+        <input type="number" placeholder="Jour" name="date_jour">
+        <select name="date_mois">
+          <option disabled selected>Mois</option>
+          <option>Janvier</option>
+          <option>Février</option>
+          <option>Mars</option>
+        </select>
+        <input type="number" placeholder="Année" name="date_annee">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Sexe</h3>
+      <div class="form-fields">
+        <select name="sexe">
+          <option disabled selected>Je suis..</option>
+          <option>Homme</option>
+          <option>Femme</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <button>Inscription</button>
+    </div>
+  </form>
+</body>
+</html>
