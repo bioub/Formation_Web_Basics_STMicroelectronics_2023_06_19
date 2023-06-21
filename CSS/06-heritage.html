@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .externe {
+      /* les propriétés texte sont héritées par défaut :
+      color, font-size, font-weight, text-decoration, font-family... */
+      color: red; /* couleur du texte */
+      border: 1px solid black;
+    }
+
+    .interne {
+      /* les propriétés propriété peuvent hérité via le mot inherit */
+      border: inherit; /* 1px solid black; */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="externe">
+    Text 1
+    <div class="interne">
+      Text 2
+    </div>
+  </div>
+
+
+</body>
+</html>

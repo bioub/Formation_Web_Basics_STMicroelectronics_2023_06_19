@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1 0 0 */
+      #item1 {
+        background-color: yellow;
+      }
+
+      /* 0 1 0 */
+      .item {
+        background-color: red;
+      }
+
+      /* 0 1 1 */
+      div.item {
+        background-color: blue;
+      }
+
+      /* 0 1 1 */
+      div:nth-child(2) {
+        background-color: orange;
+      }
+
+      /* 0 0 1 */
+      div {
+        background-color: green;
+      }
+
+      /* Bonne pratique d'écrire son CSS par spécificité ascendante
+      L'ordre dans le lequel il s'appelle est également l'ordre du fichier, ex :
+      div {
+        background-color: green;
+      }
+
+      .item {
+        background-color: red;
+      }
+
+      div.item {
+        background-color: blue;
+      }
+
+      div:nth-child(2) {
+        background-color: orange;
+      }
+
+      #item1 {
+        background-color: yellow;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <div id="item1" class="item">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nobis
+      soluta delectus esse enim ea illum exercitationem maxime sed facere iusto
+      rem, deserunt, facilis eaque optio adipisci, possimus dolorem dignissimos.
+    </div>
+    <div id="item2" class="item">
+      Consequatur repellat, cumque praesentium recusandae sequi deserunt sit
+      assumenda eos iste, ipsa error esse accusamus nesciunt quaerat reiciendis
+      soluta facilis fugiat, sapiente odio obcaecati illum numquam. Aut quod
+      iste rerum.
+    </div>
+    <div id="item3" class="item">
+      Soluta ratione, officiis consectetur error, aliquam dignissimos id sunt
+      doloribus autem, reiciendis nihil mollitia nulla! Veritatis ut dicta quos
+      culpa quia, laboriosam, earum a voluptas eum nobis perferendis deleniti
+      vitae?
+    </div>
+  </body>
+</html>

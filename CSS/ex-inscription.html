@@ -4,52 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    #register-form {
+      padding: 10px;
+      width: 400px;
+      background-color: lightgray;
+    }
+
+    .form-prenom, .form-nom {
+      width: 48%
+    }
+
+    .form-username, .form-password, .form-sexe {
+      width: 100%;
+    }
+
+    .form-jour {
+      width: 20%;
+    }
+
+    .form-mois {
+      width: 40%;
+    }
+
+    .form-annee {
+      width: 37%;
+    }
+  </style>
 </head>
 <body>
-  <form action="https://httpbin.org/post" method="post">
+  <form id="register-form" action="https://httpbin.org/post" method="post">
     <div class="form-row">
       <h3>Nom</h3>
       <div class="form-fields">
-        <input type="text" placeholder="Prénom" name="prenom">
-        <input type="text" placeholder="Nom" name="nom">
+        <input type="text" placeholder="Prénom" name="prenom" class="form-prenom">
+        <input type="text" placeholder="Nom" name="nom" class="form-nom">
       </div>
     </div>
     <div class="form-row">
       <h3>Choisissez votre nom d'utilisateur</h3>
       <div class="form-fields">
-        <input type="text" placeholder="@gmail.com" name="username">
+        <input type="text" placeholder="@gmail.com" name="username" class="form-username">
       </div>
       <a href="#">Je préfère utiliser mon adresse e-mail actuelle</a>
     </div>
     <div class="form-row">
       <h3>Créez votre mot de passe</h3>
       <div class="form-fields">
-        <input type="password" name="password">
+        <input type="password" name="password" class="form-password">
       </div>
     </div>
     <div class="form-row">
       <h3>Confirmez votre mot de passe</h3>
       <div class="form-fields">
-        <input type="password">
+        <input type="password" class="form-password">
       </div>
     </div>
     <div class="form-row">
       <h3>Confirmez votre mot de passe</h3>
       <div class="form-fields">
-        <input type="number" placeholder="Jour" name="date_jour">
-        <select name="date_mois">
+        <input type="number" placeholder="Jour" name="date_jour" class="form-jour">
+        <select name="date_mois" class="form-mois">
           <option disabled selected>Mois</option>
           <option>Janvier</option>
           <option>Février</option>
           <option>Mars</option>
         </select>
-        <input type="number" placeholder="Année" name="date_annee">
+        <input type="number" placeholder="Année" name="date_annee" class="form-annee">
       </div>
     </div>
     <div class="form-row">
       <h3>Sexe</h3>
       <div class="form-fields">
-        <select name="sexe">
+        <select name="sexe" class="form-sexe">
           <option disabled selected>Je suis..</option>
           <option>Homme</option>
           <option>Femme</option>
