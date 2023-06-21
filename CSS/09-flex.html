@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        /* height: 100vh; */
+        display: flex;
+        /* flex-direction: column-reverse; */
+        /* justify-content: space-evenly; */
+        /* align-items: stretch; */
+        flex-wrap: wrap;
+      }
+
+      .col {
+        width: 100px;
+        height: 100px;
+      }
+
+      .yellow {
+        background-color: lightyellow;
+        /* height: 50px; */
+        order: 1;
+      }
+
+      .red {
+        background-color: lightcoral;
+        flex: 3; /* 3 fractions sur un total de 4 => 3/4 de l'espace restant */
+        /* height: 120px; */
+      }
+
+      .blue {
+        background-color: lightblue;
+        flex: 1; /* 1 fraction sur un total de 4 => 1/4 de l'espace restant */
+        /* height: 60px; */
+      }
+
+      .green {
+        order: -1;
+        background-color: lightgreen;
+        /* height: 90px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col yellow">yellow</div>
+      <div class="col red">red</div>
+      <div class="col green">green</div>
+      <div class="col blue">blue</div>
+      <!-- <div class="col yellow">yellow</div>
+      <div class="col red">red</div>
+      <div class="col green">green</div>
+      <div class="col blue">blue</div> -->
+    </div>
+  </body>
+</html>

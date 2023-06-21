@@ -91,11 +91,23 @@
       content: '›';
     }
 
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .gallery > div {
-      display: inline-block;
+      /* display: inline-block; */
       width: 150px;
       height: 100px;
       background-color: orange;
+      /* margin-right: 10px; */
+      /* margin-bottom: 10px; */
+    }
+
+    .gallery > div:nth-child(3n) {
+      /* margin-right: 0; */
     }
 
   </style>
