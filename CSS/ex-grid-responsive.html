@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 764px;
+    }
+
+    header {
+      position: relative;
+      padding: 10px;
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    header h1 {
+      margin-top: 0;
+    }
+
+    .menu-login {
+      background-color: green;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+    }
+
+    .cols {
+      display: flex;
+    }
+
+    .menu-aside {
+      width: 30%;
+      background-color: yellow;
+    }
+
+    .menu-aside a {
+      display: block;
+      height: 30px;
+      background-color: orange;
+      margin: 1em 0;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+
+    main {
+      width: 70%;
+      padding: 10px;
+    }
+
+    .menu-breadcrumb {
+      margin-bottom: 1em;
+    }
+
+    .menu-breadcrumb ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+
+    .menu-breadcrumb ul li {
+      display: inline;
+    }
+
+    .menu-breadcrumb ul li + li::before {
+      content: '›';
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery > div {
+      width: 150px;
+      height: 100px;
+      background-color: orange;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Titre</h1>
+      <nav class="menu-login">
+        Login / Register
+      </nav>
+    </header>
+    <!--
+      Exercice 1
+      Supprimer la balise <div class="cols"> en conservant son contenu
+      On se retrouve donc avec l'arborescence
+      <div class="container">
+        <header>...</header>
+        <nav class="menu-aside">...</nav>
+        <main>...</main>
+      </div>
+      Dans le CSS, retirer les largeurs/hauteurs à header, .menu-aside et main
+      Utiliser ensuite display: grid sur la balise <div class="container">
+      et y définir une grille de 2 colonnes et 2 lignes
+      la première colonne fera 200px de large et la 2e le reste (1fr)
+      la première ligne fera 100px de haut et la 2e la hauteur du contenu (auto)
+
+      Définir grid-template-areas
+
+      Placer ensuite les éléments sur la grille pour que le header occupe la première ligne
+      .menu-aside et main la seconde ligne
+
+      Exercice 2
+      Ajouter une media query :
+      Si la largeur du viewport fait moins de 764px
+      Passer la grid à 3 lignes (hauteur 100px puis auto et auto)
+      Et une colonne de largeur 100%
+    -->
+    <div class="cols">
+      <nav class="menu-aside">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+      </nav>
+      <main>
+        <nav class="menu-breadcrumb">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Catégorie</a>
+            </li>
+            <li>
+              <a href="#">Produit</a>
+            </li>
+          </ul>
+        </nav>
+        <!--
+          Exercice 3
+          Créer une grille pour la gallery
+          Le nombre de ligne doit être automatique (regarder la doc de grid-auto-rows)
+          Retirer les largeur hauteur dans le CSS .gallery > div
+          Les colonnes sont de même taille (1 fraction de l'espace disponible)
+          Les lignes sont de hauteur 100px
+
+          Si le viewport fait moins de 600px passer à 2 colonnes
+          Si le viewport fait moins de 400px passer à 1 colonne
+        -->
+        <div class="gallery">
+          <div>img</div>
+          <div>img</div>
+          <div>img</div>
+          <div>img</div>
+          <div>img</div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
