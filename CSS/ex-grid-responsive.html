@@ -62,6 +62,7 @@
         top: 0;
         right: 0;
         padding: 10px;
+        /* animation: menuAnim 5s linear infinite; */
       }
 
       .cols {
@@ -81,6 +82,13 @@
         text-align: center;
         text-decoration: none;
         color: white;
+        /* transition: background-color linear 1s; */
+        transition: all linear 1s;
+      }
+
+      .menu-aside a:hover {
+        background-color: red;
+        /* transform: scale(1.4) rotate(20deg); */
       }
 
       main {
@@ -127,6 +135,15 @@
 
       .gallery > div {
         background-color: orange;
+      }
+
+      @keyframes menuAnim {
+        0% {
+          transform: translateX(-100vw);
+        }
+        100% {
+          transform: translateX(100vw);
+        }
       }
     </style>
   </head>
