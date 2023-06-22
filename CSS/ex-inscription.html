@@ -28,8 +28,14 @@
       background-color: lightgray;
     }
 
+    .form-fields {
+      display: flex;
+      gap: 5px;
+    }
+
     .form-prenom, .form-nom {
-      width: 48%
+      width: 48%;
+      flex: 1;
     }
 
     .form-username, .form-password, .form-sexe {
@@ -37,15 +43,18 @@
     }
 
     .form-jour {
-      width: 20%;
+      flex: 2;
+      width: 100px;
     }
 
     .form-mois {
-      width: 40%;
+      flex: 4;
+      width: 100px;
     }
 
     .form-annee {
-      width: 37%;
+      flex: 3;
+      width: 100px;
     }
   </style>
 </head>
@@ -84,12 +93,13 @@
       </div>
     </div>
     <div class="form-row">
-      <h3>Confirmez votre mot de passe</h3>
+      <h3>Date de naissance</h3>
       <!-- Exercice 2
       Faire de ce .form-fields un conteneur flex
       et que les 3 champs à l'intérieur se répartisse l'espace
       à 2/9e pour le jour 4/9e pour le mois et 3/9e pour l'année (en utilisant flex: )
       Ajouter gap: 5px pour séparer les éléments
+
       -->
       <div class="form-fields">
         <input type="number" placeholder="Jour" name="date_jour" class="form-jour">
