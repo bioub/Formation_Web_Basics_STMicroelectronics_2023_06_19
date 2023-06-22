@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        padding: 10px;
+        background-color: lightgreen;
+      }
+
+      p {
+        border: 1px solid black;
+      }
+
+      @media print {
+        nav {
+          display: none;
+        }
+      }
+
+      @media (orientation: portrait) {
+        p {
+          background-color: lightyellow;
+        }
+      }
+
+      @media (orientation: landscape) {
+        p {
+          background-color: lightsalmon;
+        }
+      }
+
+      .menu-mobile {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        .menu-mobile {
+          display: block;
+        }
+        .menu {
+          display: none;
+        }
+      }
+    </style>
+    <!-- <style media="print">
+      nav {
+        display: none;
+      }
+    </style> -->
+  </head>
+  <body>
+    <nav>Menu</nav>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
+      praesentium at, consequuntur vel fuga quod eos fugit dolores mollitia
+      nobis, adipisci iure delectus, deleniti velit a inventore obcaecati!
+      Tempore, hic?
+    </p>
+
+    <div class="menu">
+      <h2>Menu desktop</h2>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+
+    <div class="menu-mobile">
+      <h2>Menu mobile</h2>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+  </body>
+</html>
