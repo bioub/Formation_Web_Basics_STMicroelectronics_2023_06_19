@@ -38,6 +38,10 @@ console.log('E');
 // File d'attente (1000ms) : taskC
 // File d'attente (1001ms) :
 
+// Conférence In the loop - JSConf.Asia 2018
+// Jake Archibald (Google)
+// https://www.youtube.com/watch?v=cCOL7MC4Pl0
+
 // Attention en pratique si j'appelle plusieurs fonction async
 // en même temps, je ne sais pas dans quel ordre les callbacks vont s'exécuter
 // (setTimeout un cas particulier)
