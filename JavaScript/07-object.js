@@ -48,3 +48,114 @@ console.log(console instanceof Object);
 console.log(process instanceof Object);
 console.log(module instanceof Object);
 console.log(exports instanceof Object);
+
+// L'opérateur [] est une alternative à l'opérateur .
+// Mais beaucoup plus dynamique
+console['log'](process['argv']);
+// Permet aussi d'accéder à des clés qui contiennent des caractères spéciaux . [] : ,
+
+const consoleMethod = 'log';
+const processProp = 'argv';
+console[consoleMethod](process[processProp]);
+
+// Boucle for .. in, permet de boucler sur les clés
+for (const key in process) {
+  // permet de limiter aux propriétés
+  if (Object.hasOwnProperty.call(process, key)) {
+    const value = process[key];
+    console.log(key, value);
+  }
+}
+
+// JSON : JavaScript Object Notation
+// Sérialisation d'un objet (une chaine qui représente un objet)
+
+const moduleJson = JSON.stringify(module);
+console.log(moduleJson);
+console.log(typeof moduleJson); // string
+
+const objectFromJson = JSON.parse(moduleJson);
+console.log(objectFromJson.path); // /Users/romain/Desktop/Web-Basics/JavaScript
+
+// 2 façons de créer un objet :
+
+// Object literal
+// Syntaxe qui permet directement de créer l'objet
+const coordsA = {
+  x: 1,
+  y: 2,
+  compute() {
+    return 'compute called';
+  },
+};
+console.log(typeof coordsA); // object
+
+console.log(coordsA.x);
+console.log(coordsA.y);
+console.log(coordsA["y"]);
+
+// On peut étendre un objet
+// c'est à dire ajouter des clés/valeurs après sa création
+// Extensibilité de l'objet
+coordsA.z = 3; // ajout
+coordsA.z = 4; // modification
+delete coordsA.z; // suppression
+console.log(coordsA);
+
+// Même un objet qu'on a pas créé est extensible (MAUVAISE PRATIQUE)
+delete Math.random;
+delete process.argv;
+console.log(Math.random);
+console.log(process.argv);
+
+const coordsB = {
+  x: 3,
+  y: 4,
+  compute() {
+    return 'compute called';
+  },
+};
+
+console.log(coordsA.compute() === coordsB.compute()); // true
+console.log(coordsA.compute === coordsB.compute); // false (2 fonctions identiques en mémoire)
+
+// Les 2 inconvénients de Object Literal
+// - la création n'est pas factorisée (comme avec une fonction ou une classe)
+// - les méthodes sont dupliquées (problème mémoire/perf)
+
+// Constructor (fonction constructeur)
+// Syntaxe historique
+// function User(name) {
+//   this.name = name;
+// }
+// User.prototype.hello = function() {
+//   return `Hello my name is ${this.name}`
+// };
+
+// Syntaxe moderne
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  hello() {
+    return `Hello my name is ${this.name}`;
+  }
+}
+
+const userA = new User('romain');
+const userB = new User('toto');
+console.log(typeof userA); // object
+
+// y compris avec classe, aucune garantie qu'une clé existe
+// delete userA.name;
+
+console.log(userA.name);
+console.log(userB.name);
+console.log(userA.hello());
+
+// Quand on utilise l'opérateur . ou []
+// JS va faire plusieurs recherche jusqu'à trouver une valeur
+// 1/ regarde dans l'objet et trouve (exemple userA.name)
+// 2/ regarde dans le prototype du constructeur (exemple User.prototype.hello)
+// 3/ regarde dans les prototypes chainés (simule l'héritage)
+// 4/ retourne undefined
