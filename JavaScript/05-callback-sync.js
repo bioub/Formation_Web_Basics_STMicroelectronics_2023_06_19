@@ -2,6 +2,10 @@
   console.log(letter)
 });
 
+for (const letter of ['A', 'B']) {
+  console.log(letter);
+}
+
 // du code synchrone s'exécute tout de suite
 // si l'opération est longue le thread est bloqué
 

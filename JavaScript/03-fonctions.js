@@ -30,7 +30,7 @@ const multi = (a, b) => a * b;
   console.log(letter)
 });
 
-// Un callback est une fonction que je définie mais que je n'appelle
+// Un callback est une fonction que je défini mais que je n'appelle
 // pas, c'est un autre code qui appelera ma fonction (ce code je ne l'ai pas écrit)
 
 

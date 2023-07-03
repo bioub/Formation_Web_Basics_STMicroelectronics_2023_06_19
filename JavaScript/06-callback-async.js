@@ -7,7 +7,7 @@ console.log('E');
 
 // Question, à votre avis dans quel ordre s'affiche les lettres
 // Réponse 1 - A B C D E
-// Réponse 2 - E B A D C
+// Réponse 2 - E B A D C <---
 // Réponse 3 - B E A D C
 // Réponse 4 - E B D A C
 
