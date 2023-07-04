@@ -2,6 +2,7 @@
 // peut contenir des propriétés (valeurs)
 // exemple argv dans process = les arguments passés en ligne de commande
 console.log(process.argv);
+console.log(process.env);
 /*
 [
   '/Users/romain/.nvm/versions/node/v16.19.0/bin/node',
@@ -23,6 +24,7 @@ console.log(process.cwd());
 
 // Object.keys retournent toutes les clés (sauf exception)
 console.log(Object.keys(process));
+// Object.defineProperty
 
 // Dans du code JS si vous voyez l'opérateur . ou []
 // ce qui précède est un objet
@@ -141,6 +143,11 @@ class User {
     return `Hello my name is ${this.name}`;
   }
 }
+
+// une classe est une fonction constructeur déguisée
+// (sucre syntaxique)
+console.log(typeof User); // function
+console.log(typeof User.prototype.hello); // function
 
 const userA = new User('romain');
 const userB = new User('toto');

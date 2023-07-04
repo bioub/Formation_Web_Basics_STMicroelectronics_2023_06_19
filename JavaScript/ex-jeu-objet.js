@@ -1,3 +1,5 @@
+// Bonne pratique moderne
+// créer 4 fonctions plutôt qu'un objet
 const Random = {
   getRandom() {
     return Math.random();
