@@ -24,9 +24,9 @@ function createTodoRow(todo) {
   <input type="checkbox"> et <button class="todos-row-delete">-</button>
   Comme dans l'exemple suivant :
   <div class="todos-row" data-todo-id="12">
-    <input type="checkbox">
-    <span class="todos-row-text">Acheter du pain</span>
-    <button class="todos-row-delete">-</button>
+    <input type="checkbox" class="todos-status">
+    <span class="todos-value">Finir la théorie</span>
+    <button class="todos-btn-delete">-</button>
   </div>
   */
 
