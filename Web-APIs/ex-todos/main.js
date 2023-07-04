@@ -21,3 +21,10 @@ formEl.addEventListener('submit', (event) => {
   });
   listEl.append(todoRowEl);
 });
+
+/* Exercice 3
+Ecouter le click de checkboxEl (la checkbox globale)
+Et cocher ou décocher toutes les checkboxes de la liste
+Pour sélectionner plusieurs élement on utiliser document.querySelectorAll()
+et boucler ensuite sur le résultat
+*/
