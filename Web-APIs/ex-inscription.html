@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    #register-form {
+      padding: 10px;
+      width: 400px;
+      background-color: lightgray;
+    }
+
+    .form-fields {
+      display: flex;
+      gap: 5px;
+    }
+
+    .form-prenom, .form-nom {
+      width: 48%;
+      flex: 1;
+    }
+
+    .form-username, .form-password, .form-sexe {
+      width: 100%;
+    }
+
+    .form-jour {
+      flex: 2;
+      width: 100px;
+    }
+
+    .form-mois {
+      flex: 4;
+      width: 100px;
+    }
+
+    .form-annee {
+      flex: 3;
+      width: 100px;
+    }
+
+    .errors {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form id="register-form" action="https://httpbin.org/post" method="post">
+    <div class="errors"></div>
+    <div class="form-row">
+      <h3>Nom</h3>
+      <!-- Exercice 1
+      Faire de ce .form-fields un conteneur flex
+      et que les 2 champs à l'intérieur se répartisse l'espace
+      restant à 50% (en utilisant flex)
+      Ajouter gap: 5px pour séparer les éléments
+      -->
+      <div class="form-fields">
+        <input type="text" placeholder="Prénom" name="prenom" class="form-prenom">
+        <input type="text" placeholder="Nom" name="nom" class="form-nom">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Choisissez votre nom d'utilisateur</h3>
+      <div class="form-fields">
+        <input type="text" placeholder="@gmail.com" name="username" class="form-username">
+      </div>
+      <a href="#">Je préfère utiliser mon adresse e-mail actuelle</a>
+    </div>
+    <div class="form-row">
+      <h3>Créez votre mot de passe</h3>
+      <div class="form-fields">
+        <input type="password" name="password" class="form-password">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Confirmez votre mot de passe</h3>
+      <div class="form-fields">
+        <input type="password" class="form-password">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Date de naissance</h3>
+      <!-- Exercice 2
+      Faire de ce .form-fields un conteneur flex
+      et que les 3 champs à l'intérieur se répartisse l'espace
+      à 2/9e pour le jour 4/9e pour le mois et 3/9e pour l'année (en utilisant flex: )
+      Ajouter gap: 5px pour séparer les éléments
+
+      -->
+      <div class="form-fields">
+        <input type="number" placeholder="Jour" name="date_jour" class="form-jour">
+        <select name="date_mois" class="form-mois">
+          <option disabled selected>Mois</option>
+          <option>Janvier</option>
+          <option>Février</option>
+          <option>Mars</option>
+        </select>
+        <input type="number" placeholder="Année" name="date_annee" class="form-annee">
+      </div>
+    </div>
+    <div class="form-row">
+      <h3>Sexe</h3>
+      <div class="form-fields">
+        <select name="sexe" class="form-sexe">
+          <option disabled selected>Je suis..</option>
+          <option>Homme</option>
+          <option>Femme</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <button>Inscription</button>
+    </div>
+  </form>
+  <script>
+    /*
+    Exercice :
+    En vous inspirant du 01-hello
+    Sélectionner la balise dont la classe est errors
+    Sélectionner les 4 champs suivants :
+    - prénom
+    - nom
+    - mot de passe
+    - répéter le mot de passe
+    (vous pouvez ajouter des classes ou des ids si besoin dans le HTML)
+
+    Ecouter l'événement input (comme dans 01-hello) sur ces 4 champs
+
+    Afficher une erreur lors de la saisie dans la balise <div class="errors"></div>
+    - si le prénom est vide
+    - si le nom est vide
+    - si le mot de passe est différent de la répétition
+  </script>
+</body>
+</html>
