@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+
+    .box {
+      box-sizing: border-box;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    const boxEl = document.querySelector('.box');
+
+    boxEl.addEventListener('click', () => {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      boxEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+      const { width, height } = boxEl.getBoundingClientRect();
+      boxEl.style.width = (width + 10) + "px";
+      boxEl.style.height = (height + 10) + "px";
+    });
+  </script>
+</body>
+</html>
