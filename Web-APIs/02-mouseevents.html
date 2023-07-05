@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+      }
+
+      .externe {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+      }
+
+      .interne {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="externe">
+      <div class="interne"></div>
+    </div>
+    <script>
+      const eventNames = [
+        // "click",
+        // "dblclick",
+        // "contextmenu",
+        // "auxclick",
+
+        // "mousedown",
+        // "mousemove",
+        // "mouseup",
+
+        "mouseenter",
+        "mouseover",
+        // "mouseleave",
+        // "mouseout",
+      ];
+
+      // const interneEl = document.querySelector(".interne");
+
+      // for (const eventName of eventNames) {
+      //   interneEl.addEventListener(eventName, () => {
+      //     console.log(eventName);
+      //   });
+      // }
+
+      const externeEl = document.querySelector(".externe");
+
+      for (const eventName of eventNames) {
+        externeEl.addEventListener(eventName, (event) => {
+          console.log(eventName);
+          console.log(event);
+        });
+      }
+    </script>
+  </body>
+</html>
