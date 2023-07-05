@@ -20,11 +20,6 @@ function createInput(title) {
   inputEl.type = 'text';
   inputEl.className = 'todos-value-edit';
   inputEl.value = title;
-  inputEl.addEventListener('keyup', (event) => {
-    if (event.code === 'Enter') {
-      inputEl.replaceWith(createSpan(inputEl.value));
-    }
-  });
   return inputEl;
 }
 
@@ -35,9 +30,6 @@ function createSpan(title) {
   const spanEl = document.createElement('span');
   spanEl.className = 'todos-value';
   spanEl.innerText = title;
-  spanEl.addEventListener('dblclick', () => {
-    spanEl.replaceWith(createInput(spanEl.innerText));
-  });
   return spanEl;
 }
 
@@ -45,9 +37,6 @@ function createDeleteButton() {
   const btnDeleteEl = document.createElement('button');
   btnDeleteEl.className = 'todos-btn-delete';
   btnDeleteEl.innerText = '-';
-  btnDeleteEl.addEventListener('click', () => {
-    btnDeleteEl.parentElement.remove();
-  });
   return btnDeleteEl;
 }
 
