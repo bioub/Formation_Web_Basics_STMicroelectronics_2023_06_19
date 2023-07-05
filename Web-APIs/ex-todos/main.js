@@ -51,3 +51,20 @@ listEl.addEventListener('keyup', (event) => {
     event.target.replaceWith(createSpan(event.target.value));
   }
 });
+
+// Exercice 6
+// Au chargement de la page envoyer une requête GET à l'URL
+// https://jsonplaceholder.typicode.com/todos/
+// Boucler sur le tableau reçu en JSON et afficher
+// les données en appelant createTodoRow
+
+// Exercice 7
+// Au submit du formulaire afficher la bordure
+// du champs en rouge si aucune valeur n'a été saisie
+// et ne pas ajouter la ligne
+
+// Exercice 8
+// Ecouter l'événément input sur le champ
+// Stocker la saisie dans le localStorage
+// Au chargement de la page reremplir le champ avec
+// le contenu du localStorage
