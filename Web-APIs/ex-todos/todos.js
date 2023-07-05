@@ -66,13 +66,5 @@ function createTodoRow(todo) {
   divEl.append(createSpan(todo.title));
   divEl.append(createDeleteButton());
 
-  /* Exercice 4
-  Au double click de spanEl
-  Remplacer spanEl par une balise <input type="text" dont la valeur sera
-  le contenu de spanEl
-  Ecouter ensuite l'événement keyup de cette balise input, si
-  cela correspond à la touche ENTREE revenir à la balise span
-  */
-
   return divEl;
 }
