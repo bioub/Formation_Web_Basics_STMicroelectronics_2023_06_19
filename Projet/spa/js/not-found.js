@@ -1,7 +1,7 @@
 /** @param {HTMLElement} mainEl */
-function about(mainEl) {
+function notFound(mainEl) {
   const template = `
-<p>ST Web Basics Project v1.0</p>
+<p>Page not found</p>
   `;
 
   mainEl.innerHTML = template;
